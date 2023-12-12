@@ -3,8 +3,7 @@
 
 
 void main() {
-    int height, weight; // Declartions for userinput and the calculated input off of that
-    float calculatedBMI;
+    int height, weight, calculatedBMI; // Declartions for userinput and the calculated input off of that
 
    printf("BMI Values:\n\n" // Display calculation chart
 "Underweight: less than 18.5\n"
