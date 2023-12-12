@@ -3,7 +3,8 @@
 
 
 void main() {
-    int height, weight, calculatedBMI;
+    int height, weight;
+    float calculatedBMI;
 
    printf("BMI Values:\n\n"
 "Underweight: less than 18.5\n"
@@ -18,5 +19,4 @@ void main() {
 
     calculatedBMI = (weight * 703) / (height * height);
     printf("Your calculated Body Mass Index (BMI) is: %d\n\n", calculatedBMI);
-
 }
