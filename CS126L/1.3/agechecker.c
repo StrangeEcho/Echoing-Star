@@ -6,11 +6,9 @@ void main() {
     scanf("%d", &age);
     if (age < 18) {
         printf("You are a minor");
-        return;
     }
-    if (age >= 18 && age <= 65) {
+    else if (age <= 65) {
         printf("You are of working age");
-        return;
     }
     else {
         printf("You are retired");
