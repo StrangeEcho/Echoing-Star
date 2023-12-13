@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int displayOptions() { 
+int displayOptions() { // Helper function to display options and collect what type of operation they want to do
     int desiredOp;
     printf("\n1. Addition\n"
     "2. Subtraction\n"
@@ -12,7 +12,7 @@ int displayOptions() {
     return desiredOp;
 }
 
-void displayTime() {
+void displayTime() { // Helper function to get the current time
     time_t currentTime;
     char* timeString;
 
@@ -24,11 +24,11 @@ void displayTime() {
 void main() { 
     displayTime();
 
-    short sentinel = 1;
+    short sentinel = 1; // Single declartion for sentinel value
 
-    while (sentinel != -1) {
-        short op = displayOptions();
-        switch (op) {
+    while (sentinel != -1) { 
+        short op = displayOptions(); // Collect user choice
+        switch (op) { // Propogate a problem session depending on what op is <1-4>
             int answer; 
             case 1:
                 printf("4 + 4 = ");
@@ -71,8 +71,8 @@ void main() {
                 }
                 break;
         }
-        printf("\nEnter 1 to try again and -1 to exit: ");
-        scanf("%d", &sentinel);
+        printf("\nEnter 1 to try again and -1 to exit: "); // Collect sentinel
+        scanf("%hd", &sentinel);
     }
 
 }
