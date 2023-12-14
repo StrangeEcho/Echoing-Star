@@ -1,3 +1,10 @@
+/*
+Performance Assessment 2.2 - Credit Limit Lab
+Ruben T
+CIS126L | John Bowerman
+12.21.2023
+*/
+
 #include <stdio.h>
 
 void main() { 

@@ -1,3 +1,10 @@
+/*
+Performance Assessment 1.3 - Age Lab
+Ruben T
+CIS126L | John Bowerman
+12.12.2023
+*/
+
 #include <stdio.h>
 
 void main() {

@@ -1,3 +1,10 @@
+/*
+Project 2.3 - Math Practice Week 2
+Ruben T
+CIS126L | John Bowerman
+12.21.2023
+*/
+
 #include <stdio.h>
 #include <time.h>
 

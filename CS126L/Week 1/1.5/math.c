@@ -1,3 +1,10 @@
+/*
+Project 1.5 - Math Practice Week 1
+Ruben T
+CIS126L | John Bowerman
+12.14.2023
+*/
+
 #include <stdio.h>
 
 void main() {

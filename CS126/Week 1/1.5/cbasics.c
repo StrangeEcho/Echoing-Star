@@ -1,3 +1,10 @@
+/*
+Guided Practice 1.5
+Ruben T
+CIS126 | Thomas Sullivan
+12.11.2023
+*/
+
 #include <stdio.h>
 
 void main() {

@@ -1,6 +1,11 @@
+/*
+Performance Assessment 1.4 - BMI Lab
+Ruben T
+CIS126L | John Bowerman
+12.12.2023
+*/
+
 #include <stdio.h>
-
-
 
 void main() {
     float height, weight, calculatedBMI; // Declartions for userinput and the calculated input off of that
