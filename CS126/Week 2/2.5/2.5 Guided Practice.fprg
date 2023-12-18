@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ruben"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-18 12:07:54 PM"/>
+        <attribute name="created" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xODsxMDoyMzo0MiBBTTsyMzY5"/>
+        <attribute name="edited" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xODsxMjowNzo1NCBQTTsxOzI0OTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tempCount" type="Integer" array="False" size=""/>
+            <declare name="total, temp" type="Real" array="False" size=""/>
+            <assign variable="tempCount" expression="1"/>
+            <assign variable="total" expression="0"/>
+            <while expression="tempCount &lt;= 5">
+                <output expression="&quot;Enter Temperature &quot; &amp; tempCount" newline="True"/>
+                <input variable="temp"/>
+                <assign variable="total" expression="total + temp"/>
+                <assign variable="tempCount" expression="tempCount + 1"/>
+            </while>
+            <assign variable="average" expression="total / tempCount"/>
+            <output expression="&quot;Average: &quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
