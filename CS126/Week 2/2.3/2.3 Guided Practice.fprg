@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ruben"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-18 12:28:47 PM"/>
+        <attribute name="created" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xODsxMjoyNjozOCBQTTsyMzk0"/>
+        <attribute name="edited" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xODsxMjoyODo0NyBQTTsxOzI1MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the first number&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Enter the second number&quot;" newline="True"/>
+            <input variable="num2"/>
+            <if expression="num1 &gt; num2">
+                <then>
+                    <output expression="&quot;The first number is greater than the second number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num1 &lt; num2">
+                        <then>
+                            <output expression="&quot;The first number is less than the second number&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Both of the numbers entered are equal&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,3 +1,10 @@
+/*
+3.2 Performance Assessment - Parking Garage Lab
+Ruben T
+CIS126L | John Bowerman
+12.26.2023
+*/
+
 #include <stdio.h>
 
 float calculateCharges(float hours) {
