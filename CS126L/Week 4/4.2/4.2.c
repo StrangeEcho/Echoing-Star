@@ -35,7 +35,7 @@ int checkFlightFull(int seats[]) { // Check if flight is full be summing the ite
 	if (tot == 10) {
 		return 1; // all seats are taken
 	} else {
-		return 0;
+		return 0; // no seats are available
 	}
 }
 
