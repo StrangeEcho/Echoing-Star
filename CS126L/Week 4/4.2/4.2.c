@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define NUM_SEATS 11 //
+#define NUM_SEATS 11 
 
 int isSeatAvailable(int seatNumber, int seats[]) { // return 1 if its available otherwise 0 for unavailable
 	int available;
