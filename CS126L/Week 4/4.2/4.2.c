@@ -74,7 +74,7 @@ void main() {
 			}
 		
 		} 
-		else { // Economy
+		else { // Economy 
 			for(seatNumber = 6; seatNumber < 11; seatNumber++) {
 				if (isSeatAvailable(seatNumber, seats) == 1) {
 					printBoardingPass(seatChoice, seatNumber);
