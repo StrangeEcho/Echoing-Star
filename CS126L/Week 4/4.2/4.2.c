@@ -7,7 +7,7 @@ int isSeatAvailable(int seatNumber, int seats[]) { // return 1 if its available 
 	int index = seatNumber - 1;
 	
 	if (seats[index] == 0) { // checks if seat is available
-		seats[index] = 1; // "Reserve" the seat (Re-assign its posistioned value to 1)
+		seats[index] = 1; // "Reserve" the seat (Re-assign its posistioned value to 1) 
 		available = 1;
 	} else {
 		available = 0;
