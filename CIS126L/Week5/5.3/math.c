@@ -2,12 +2,16 @@
 3.3 Project - Math Practice Week 3
 Ruben T
 CIS126L | John Bowerman
-
+12.26.2023
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
+
+int attempts = 0;
+int correctAttempts = 0;
 
 int* generateNumbers() { // Used for operations like subtraction and division
     int num1, num2;
@@ -35,6 +39,7 @@ void addition() {
     scanf("%d", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -55,6 +60,7 @@ void subtraction() {
     scanf("%d", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -73,6 +79,7 @@ void multiply() {
     scanf("%d", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -93,6 +100,7 @@ void division() {
     scanf("%f", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -100,15 +108,26 @@ void division() {
     }
 }
 
-int displayOptions() { // Helper function to display options and collect what type of operation they want to do
-    int desiredOp;
-    printf("\n1. Addition\n"
-    "2. Subtraction\n"
-    "3. Division\n"
-    "4. Multiplication\n\n"
-    "Enter a number corresponding to the desired operation: ");
-    scanf("%d", &desiredOp);
-    return desiredOp;
+char getChoice() {
+    char choice; 
+
+    printf("\nEnter a choice from any of the following:\n");
+    printf("\t 'A' for addition\n");
+    printf("\t 'S' for subtraction\n");
+    printf("\t 'D' for division\n");
+    printf("\t 'M' for multiplication\n");
+
+
+    while (1) {
+        printf("Enter a choice now: ");
+        scanf(" %c", &choice);
+        
+        choice = toupper(choice);
+        if (choice == 'A' || choice == 'S' || choice == 'D' || choice == 'M') {
+            break;
+        }
+    }
+    return choice;
 }
 
 void displayTime() { // Helper function to get the current time
@@ -121,30 +140,31 @@ void displayTime() { // Helper function to get the current time
 
 }
 void main() { 
+    printf("Welcome to Ruben's Math Program!\n");
     srand(time(NULL)); 
     displayTime();
 
-    short sentinel = 1; // Single declartion for sentinel value
+    int sentinel = 1; // Single declartion for sentinel value
 
-    while (sentinel != -1) { 
-        short op = displayOptions(); // Collect user choice
-        switch (op) { // Propogate a problem session depending on what op is <1-4>
-            int answer; 
-            case 1:
+    while (sentinel != -1) {
+        attempts += 1; // increment
+        char op = getChoice(); // Collect user choice
+        switch (op) { // Propogate a problem session depending on what op is <1-4> 
+            case 'A':
                 addition();
                 break;
-            case 2:
+            case 'S':
                 subtraction();
                 break;
-            case 3:
+            case 'D':
                 division();
                 break;
-            case 4:
+            case 'M':
                 multiply();
                 break;
         }
         printf("\nEnter 1 to try again and -1 to exit: "); // Collect sentinel
-        scanf("%hd", &sentinel);
+        scanf("%d", &sentinel);
     }
-
+    printf("You finished the math program. %d correct attempts out of %d total attempts", correctAttempts, attempts);
 }

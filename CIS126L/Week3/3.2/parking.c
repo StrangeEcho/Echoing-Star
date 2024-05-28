@@ -7,13 +7,7 @@ CIS126L | John Bowerman
 
 #include <stdio.h>
 
-float calculateCharges(float hours) {
-    if (hours < 3) { // If hours is less than three then they only have to pay 20 dollars (base charge)
-        return 20.0;
-    }
-    float totalCharge = 20 + ((hours - 3) * 5); // Calculate the diff of the hours and the default hours and multiply by 5 and plus base charge
-    return totalCharge;
-}
+float calculateCharges(float hours); // prototype
 
 void main() {
     float hours1, hours2, hours3, charge1, charge2, charge3; // Declare hours and charge vars
@@ -33,4 +27,21 @@ void main() {
     printf("1\t%.2f\t$%.2f\n", hours1, charge1);
     printf("2\t%.2f\t$%.2f\n", hours2, charge2);
     printf("3\t%.2f\t$%.2f", hours3, charge3);
+}
+
+float calculateCharges(float hours) {
+    float charge; 
+
+    if (hours > 0 && hours <=24) { // checks if the passed hours is greater than 0 and less than 24
+        if (hours <= 3) {
+            charge = 20.0; // return base charge if parked hours is less than or equal to three
+        } else {
+            charge = (20 + 5 * (hours - 3)); // "additional $5.00 per hour for each hour or part thereof in excess of three hours."
+            if (charge < 50) {
+                return charge; // return hours if less than max charge
+            } else {
+                return 50; // return max charge if charge is equal or greater than max charge
+            }
+        }
+    }
 }

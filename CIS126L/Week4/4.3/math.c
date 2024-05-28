@@ -2,12 +2,15 @@
 3.3 Project - Math Practice Week 3
 Ruben T
 CIS126L | John Bowerman
-
+12.26.2023
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+int attempts = 0;
+int correctAttempts = 0;
 
 int* generateNumbers() { // Used for operations like subtraction and division
     int num1, num2;
@@ -35,6 +38,7 @@ void addition() {
     scanf("%d", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -55,6 +59,7 @@ void subtraction() {
     scanf("%d", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -73,6 +78,7 @@ void multiply() {
     scanf("%d", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -93,6 +99,7 @@ void division() {
     scanf("%f", &input);
 
     if (input == answer) {
+        correctAttempts += 1;
         printf("You are correct!");
     }
     else {
@@ -121,12 +128,14 @@ void displayTime() { // Helper function to get the current time
 
 }
 void main() { 
+    printf("Welcome to Ruben's Math Program!\n");
     srand(time(NULL)); 
     displayTime();
 
     short sentinel = 1; // Single declartion for sentinel value
 
-    while (sentinel != -1) { 
+    while (sentinel != -1) {
+        attempts += 1; // increment
         short op = displayOptions(); // Collect user choice
         switch (op) { // Propogate a problem session depending on what op is <1-4>
             int answer; 
@@ -146,5 +155,5 @@ void main() {
         printf("\nEnter 1 to try again and -1 to exit: "); // Collect sentinel
         scanf("%hd", &sentinel);
     }
-
+    printf("You finished the math program. %d correct attempts out of %d total attempts", correctAttempts, attempts);
 }
