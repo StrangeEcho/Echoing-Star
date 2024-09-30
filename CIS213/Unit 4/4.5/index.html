@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        CIS213 Unit 4, Graded Exercise 1
+        Author: Ruben Thomas
+        Date: 7/17/24
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4, Graded Exercise 1</title>
+</head>
+<body>
+    <header>
+        <h1>Ruben Thomas, Graded Excercise 1</h1>
+    </header>
+
+    <script>
+        function getCurrentDateTime() {
+            var now = new Date();
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var day = days[now.getDay()];
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            return `${day}, ${date}, ${time}`;
+        }
+
+        function displayVisitMessage() {
+            var visited = document.cookie ? true : false
+            var visitMessage = "This is your first time"
+            if (visited) {
+                visitMessage = `Your last visit was: ${document.cookie}`;
+            }
+            document.cookie = getCurrentDateTime();
+
+            var messageElement = document.createElement('p');
+            messageElement.textContent = `Ruben Thomas, ${visitMessage}`;
+            document.body.appendChild(messageElement);
+        }
+
+        displayVisitMessage();
+    </script>
+</body>
+</html>

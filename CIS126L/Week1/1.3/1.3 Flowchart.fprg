@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ruben"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-11 10:31:25 PM"/>
+        <attribute name="created" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xMTsxMDoyODo0NyBQTTsyMzg3"/>
+        <attribute name="edited" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xMTsxMDozMToyNSBQTTsxOzI0ODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <output expression="&quot;How old are you?: &quot;" newline="True"/>
+            <input variable="age"/>
+            <if expression="age &lt; 18">
+                <then>
+                    <output expression="&quot;You are a minor&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="age &gt;= 18 &amp;&amp; age &lt;= 65">
+                        <then>
+                            <output expression="&quot;You are of working age&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;You are retired&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

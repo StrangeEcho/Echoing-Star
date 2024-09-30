@@ -1,0 +1,82 @@
+<!--
+       CIS213 Unit 1, Graded Exercise 1
+       Author: Ruben Thomas
+       Date: 6/16/24 
+    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 1 Graded Exercise 1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+    <script type="text/javascript">
+
+        function homeMsgDisplay(){
+            var homeMsg = "You selected the Home address";
+            alert(homeMsg);
+            
+        }
+
+        function workMsgDisplay(){  
+            var workMsg = "You selected the Work address";
+            alert(workMsg);
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Ruben Thomas, Graded Exercise 1</h1>
+    </header>
+
+    <article>
+        <h2>Shipping Address</h2>
+        <form>
+            <fieldset id="addrptions">
+                <legend><span>Choose an address</span></legend>
+                <div id="addroptions">
+                <label for="homeoptions">
+                    <span>Home</span><br/>
+                    100 Main St.<br />
+                    Sicilia, MA 02103
+                    <input type="radio" id="homeoption" name="shippingaddr"
+                        onclick="document.getElementById('streetinput').value = '100 Main St.';
+                        document.getElementById('cityinput').value = 'Sicilia';
+                        document.getElementById('stateinput').value = 'MA';
+                        document.getElementById('zipinput').value = '02103'; 
+                        document.getElementById('homeoption').addEventListener('click', homeMsgDisplay);" />
+                </label>
+                <label for="workoption" id="shippingaddr">
+                    <span>Work</span><br/>
+                    15 Columbine Ln.<br />
+                    Crab City, MA 02104
+                    <input type="radio" id="workoption" name="shippingaddr"
+                        onclick="document.getElementById('streetinput').value = '15 Columbine Ln.';
+                        document.getElementById('cityinput').value = 'Crab City';
+                        document.getElementById('stateinput').value = 'MA';
+                        document.getElementById('zipinput').value = '02104'; 
+                        document.getElementById('workoption').addEventListener('click', workMsgDisplay);" />
+                </label>
+            </fieldset>
+
+            <fieldset id="contactinfo">
+                <label for="streetinput">Street:
+                    <input type="text" id="streetinput" />
+                </label>
+                <label for="cityinput">City:
+                    <input type="text" id="cityinput" />
+                </label>
+                <label for="stateinput">State:
+                    <input type="text" id="stateinput" />
+                </label>
+                <label for="zipinput">ZIP:
+                    <input type="text" id="zipinput" />
+                </label>
+            </fieldset>
+        </form>
+    </article>
+</body>
+</html>

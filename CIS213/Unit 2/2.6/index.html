@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      CIS213 Unit 2, Graded Exercise 2
+      Author: Ruben Thomas
+      Date:   6/21/24
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Unit 2 Graded Exercise 2</title>
+</head>
+<body> 
+    <header>
+      <h1>
+        Ruben Thomas, Even Numbers
+      </h1>
+   </header>
+
+    <script>
+        var counter = 1;
+        var output = "";
+
+        while (counter <= 101) {
+           
+            if (counter % 2 == 0) {
+                output += counter + "<br>";
+            }
+            
+            counter += 1;
+        }
+
+        document.write(output);
+    </script>
+</body>
+</html>

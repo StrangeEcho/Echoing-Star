@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ruben"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-11 11:03:39 PM"/>
+        <attribute name="created" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xMTsxMDo1NjowMCBQTTsyMzc3"/>
+        <attribute name="edited" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xMTsxMTowMzozOSBQTTsxOzI0OTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="weight, height, calculatedBMI" type="Integer" array="False" size=""/>
+            <output expression="&quot;What is your height (in inches): &quot;" newline="True"/>
+            <input variable="height"/>
+            <output expression="&quot;Enter your weight (in pounds): &quot;" newline="True"/>
+            <input variable="weight"/>
+            <assign variable="calculatedBMI" expression="(weight * 703) / (height * height)"/>
+            <output expression="&quot;Your calculated BMI is: &quot; &amp; calculatedBMI" newline="True"/>
+            <call expression="displayCalculationChart()"/>
+        </body>
+    </function>
+    <function name="displayCalculationChart" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;BMI Values/Chart&quot;" newline="True"/>
+            <output expression="&quot;Underweight: less than 18.5&quot;" newline="True"/>
+            <output expression="&quot;Normal: between 18.5 and 24.9&quot;" newline="True"/>
+            <output expression="&quot;Overweight: between 25 and 29.0&quot;" newline="True"/>
+            <output expression="&quot;Obese: 30 or greater&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

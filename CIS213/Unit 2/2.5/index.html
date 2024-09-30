@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      CIS213 Unit 2, Graded Exercise 1
+      Author: Ruben Thomas
+      Date:   6/21/24
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Week 2 Performance Assesment 1</title>
+</head>
+<body>
+    <script>
+        function calcShipHand(){
+            var ShipHandFee;
+
+            var total = textBox.value;
+            total = parseInt(total);
+
+            if (total <= 25) {
+                ShipHandFee = 1.50;
+
+                newTotal = total + ShipHandFee;
+
+                alert("Your total is: " + newTotal.toFixed(2));
+            }
+            else {
+                ShipHandFee = total * 0.10;
+
+                newTotal = total + ShipHandFee;
+
+                alert("Your total is:$ " + newTotal.toFixed(2));
+            }
+        }
+    </script>
+
+    <header>
+      <h1>
+        Ruben Thomas, Calculate Shipping and Handling
+      </h1>
+
+      <label for="textBox">Purchase Price:</label>
+      <input type="text" id="textBox">
+
+      <button type="button" id="submitOrderBtn" onclick="calcShipHand()">Calculate Order Total</button>
+   </header>
+</body>
+</html>

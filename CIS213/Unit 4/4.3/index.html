@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            CIS213 Unit 4, Guided Practice 2
+            Author: Ruben Thomas
+            Date: 07.16.2024
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unit 4, Guided Practice</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="modernizr.custom.65897.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Ruben Thomas, Guided Practice 2
+            </h1>
+        </header>
+        <article>
+            <div id="errorMessage"></div>
+            <form action="results.html">
+                <fieldset id="deliveryInfo">
+                    <legend>Site Login</legend>
+                    <label for="usernameInput">Username</label>
+                    <input type="text" id="usernameInput" name="username">
+
+                    <label for="passwordInput">Password</label>
+                    <input type="password" id="passwordInput" name="password">
+
+                    <label for="rememberInput" id="rememberLabel">Remember Me</label>
+                    <input type="checkbox" id="rememberInput" name="remember" value="remember">
+                </fieldset>
+
+                <fieldset id="submitButton">
+                    <input type="submit" id="submitBtn" value="Login">
+                </fieldset>
+            </form>
+        </article>
+        <script src="script.js"></script>
+    </body>
+</html>

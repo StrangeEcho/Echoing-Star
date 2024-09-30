@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      CIS213 Unit 2, Guided Practice 3
+      Author: Ruben Thomas
+      Date:   6/21/24
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Unit 2 Guided Practice 3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Ruben Thomas, Guided Practice 3 
+      </h1>
+   </header>
+
+   <article>
+      <div id="results">
+          <p id="resultsExpl"></p>
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+      </div>
+      <form>
+          <fieldset>
+            <label for="mValue" id="mLabel">
+              Type the number of miles to convert to kilometers, then click Submit:
+            </label>
+            <input type="text" id="mValue"/>
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button">Submit</button>
+          </fieldset>
+      </form>
+   </article>
+
+   <script>
+      "use strict"
+      var places = []; // new array to store entered places
+
+      var i = 1; // counter variable to track array indexes
+
+      var milesElement = document.getElementById("mValue");
+      
+      function convert(){
+        return milesElement.value * 1.6;
+      }
+
+      // function to add input to array and then generate list after 5th submission
+      function processInput() {
+         var convStr = milesElement.value + " miles is "  + convert() + " km";
+
+         places[i] = convStr; // conversion message to array
+
+         milesElement.value = "" ; // clear text box
+
+         if (i < 5) { // iterate counter variable
+            i++;
+         }
+
+         else { // add entered value to array and write results to document
+            document.getElementById("resultsExpl").innerHTML = "Converted Values:";
+
+            var listItem = "";
+
+            for (i = 1; i < 6; i++) { // write each array element to its corresponding list item
+               listItem = "item" + i;
+
+               document.getElementById(listItem).innerHTML = places[i];
+            }
+         }
+      }
+
+      // add backward compatible event listener to Submit button
+      var submitButton = document.getElementById("button");
+
+      if (submitButton.addEventListener) {
+        submitButton.addEventListener("click", processInput, false); 
+      } 
+      else if (submitButton.attachEvent)  {
+        submitButton.attachEvent("onclick", processInput);
+      }
+   </script>
+</body>
+</html>

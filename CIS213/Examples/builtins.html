@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sum of Two Integers</title>
+    <script type="text/javascript">
+        document.write("<p><u>Convert a temperature from Fahrenheit\nto centigrade degree</u></p>");
+        var temp = prompt("Enter a temperature to convert: ");
+        var num = 8.9021923123
+
+        document.write("The celsius temp (default): " + toCentigrade(temp) + "<br>");
+
+        document.write("The celsius temp using floor() method is: " + Math.floor(toCentigrade(temp)) + "<br>");
+
+        document.write("The celsius temp using ceil() method is: " + Math.ceil(toCentigrade(temp)) + "<br>");
+
+        document.write("The celsius temp using toFixed() method is: 12" + (toCentigrade(temp).toFixed(2)) + "<br>");
+        
+        document.write("The number in one decimal place is: " + num.toFixed(1));
+
+        function toCentigrade(temp) {
+            return (5.0 / 9.0) * (temp - 32.0);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

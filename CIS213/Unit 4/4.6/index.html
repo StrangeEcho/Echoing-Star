@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        CIS213 Unit 4, Graded Exercise 2
+        Author: Ruben Thomas
+        Date: 7/17/24
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4, Graded Exercise 2</title>
+</head>
+<body>
+    <header>
+        <h1>Ruben Thomas, Graded Excercise 2</h1>
+    </header>
+
+    <script>
+        function getCurrentDateTime() {
+            var now = new Date();
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var day = days[now.getDay()];
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            return `${day}, ${date}, ${time}`;
+        }
+
+        function displayVisitMessage() {
+            var visitCounter = parseInt(localStorage.getItem('visitCounter')) || 0;
+            var visitMessage = "This is your first visit!";
+            var lastVisit = localStorage.getItem('lastVisit');
+
+            if (lastVisit) {
+                visitMessage = `This is your ${visitCounter}th visit to this website.`;
+                visitCounter += 1;
+            }
+
+            localStorage.setItem('visitCounter', visitCounter);
+            localStorage.setItem('lastVisit', getCurrentDateTime());
+
+            var messageElement = document.createElement('p');
+            messageElement.textContent = `Ruben Thomas, ${visitMessage} | Last Visit: ${lastVisit}`;
+            document.body.appendChild(messageElement);
+        }
+
+        displayVisitMessage();
+    </script>
+</body>
+</html>

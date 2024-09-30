@@ -1,0 +1,34 @@
+# Ignore Visual Studio Code project files
+.vscode/
+*.sln
+*.exe
+
+# Ignore build output and intermediate files
+bin/
+obj/
+
+# Ignore NuGet package directories
+packages/
+
+# Ignore user-specific files
+*.userprefs
+*.suo
+*.user
+
+# Ignore build logs and test results
+*.log
+TestResults/
+
+# Ignore Resharper files
+_ReSharper.*
+
+# Ignore Unity specific files and directories
+Library/
+Temp/
+*.csproj.user
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Windows specific files
+Thumbs.db

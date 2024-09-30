@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            CIS213: Unit 1, Guided Practice 3
+            Author: Ruben Thomas
+            Date: 6.15.2024
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Unit 1 Guided Practice 3</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="modernizr.custom.05819.js" ></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                Ruben Thomas, Guided Practice 3
+            </h1>
+        </header>
+
+        <article>
+            <h2>Lunch Selections</h2>
+            <form>
+                <input type="checkbox" id="item1" value="8">
+                <label for="item1">Friend chicken ($8.00)</label>
+                <input type="checkbox" id="item2" value="9">
+                <label for="item2">Fried Halibut ($9.00) </label>
+                <input type="checkbox" id="item3" value="8">
+                <label for="item3">Hamburger ($8.00)</label>
+                <input type="checkbox" id="item4" value="13">
+                <label for="item4">Grilled Salmon ($13.00)</label>
+                <input type="checkbox" id="item5" value="6">
+                <label for="item15">Side Salad ($6.00)</label>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </article>
+    </body>
+    <script>
+        function calcTotal() {
+            var itemTotal = 0;
+
+            var item1 = document.getElementById("item1");
+            var item2 = document.getElementById("item2");
+            var item3 = document.getElementById("item3");
+            var item4 = document.getElementById("item4");
+            var item5 = document.getElementById("item5");
+
+            (item1.checked) ? (itemtotal += 8) : (itemTotal += 0);
+            (item2.checked) ? (itemtotal += 9) : (itemTotal += 0);
+            (item3.checked) ? (itemtotal += 8) : (itemTotal += 0);
+            (item4.checked) ? (itemtotal += 13) : (itemTotal += 0);
+            (item5.checked) ? (itemtotal += 6) : (itemTotal += 0);      
+            
+            var tax = 0.07;
+            var orderTotal = itemTotal + (itemTotal * tax);
+
+            orderTotal > 0 ?
+                alart("Your order total is $" + orderTotal) :
+                alert("Please select atleast 1 item");
+        }
+        document.getElementById("submit").addEventListener("click", calcTotal, false);
+    </script>
+</html>

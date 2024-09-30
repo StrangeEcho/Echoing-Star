@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ruben"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-12 01:50:24 PM"/>
+        <attribute name="created" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xMjswMToyMzoxOSBQTTsyMzgy"/>
+        <attribute name="edited" value="cnViZW47SE9QRTRBTEw7MjAyMy0xMi0xMjswMTo1MDoyNCBQTTsyOzI0ODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sentinel, accountNumber, beginningBalance, totalCharges, totalCredits, allowedCredit, newBalance" type="Integer" array="False" size=""/>
+            <assign variable="sentinel" expression="1"/>
+            <while expression="sentinel != -1">
+                <output expression="&quot;Enter your account number: &quot;" newline="True"/>
+                <input variable="accountNumber"/>
+                <output expression="&quot;Enter your beginning balance: &quot;" newline="True"/>
+                <input variable="beginningBalance"/>
+                <output expression="&quot;Enter your total charges: &quot;" newline="True"/>
+                <input variable="totalCharges"/>
+                <output expression="&quot;Enter your total credits: &quot;" newline="True"/>
+                <input variable="totalCredits"/>
+                <output expression="&quot;Enter your allowed credit&quot;" newline="True"/>
+                <input variable="allowedCredit"/>
+                <assign variable="newBalance" expression="beginningBalance + totalCharges - totalCredits"/>
+                <if expression="newBalance &gt; allowedCredit">
+                    <then>
+                        <call expression="propogateCreditMsg(accountNumber, allowedCredit, newBalance)"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Enter -1 to exit and type 1 to continue&quot;" newline="True"/>
+                <input variable="sentinel"/>
+            </while>
+        </body>
+    </function>
+    <function name="propogateCreditMsg" type="None" variable="">
+        <parameters>
+            <parameter name="accountNumber" type="Integer" array="False"/>
+            <parameter name="allowedCredit" type="Integer" array="False"/>
+            <parameter name="newBalance" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Account Number: &quot; &amp; accountNumber" newline="True"/>
+            <output expression="&quot;Credit Limit: &quot; &amp; allowedCredit" newline="True"/>
+            <output expression="&quot;Balance: &quot; &amp; newBalance" newline="True"/>
+            <output expression="&quot;Credit Limit Exceeded!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
