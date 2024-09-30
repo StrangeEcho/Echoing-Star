@@ -1,0 +1,20 @@
+import turtle
+
+turtle.write("rubtho6330")
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(100)
+
+turtle.done()
