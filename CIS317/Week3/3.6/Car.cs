@@ -1,8 +1,10 @@
-public class Car {
+public class Car
+{
     public string Fuel { get; protected set; }
     public string Engine { get; protected set; }
 
-    protected Car(string fuel, string engine) {
+    protected Car(string fuel, string engine)
+    {
         Fuel = fuel;
         Engine = engine;
     }

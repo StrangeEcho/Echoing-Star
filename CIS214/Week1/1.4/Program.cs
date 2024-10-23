@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+
 public class OperatorDataTypes
 {
     static void Main(string[] args)
@@ -34,6 +35,7 @@ public class OperatorDataTypes
         {
             Console.WriteLine("{0:D} is less than or equal to {1:D}", intVal2, intVal3);
         }
+
         if (intVal2 >= intVal3) // Greater than or equal to
         {
             Console.WriteLine("{0:D} is greater than or equal to {1:D}", intVal2, intVal3);
@@ -56,6 +58,5 @@ public class OperatorDataTypes
         double fltValue2 = Convert.ToDouble(val);
         double total = fltValue1 + fltValue2;
         Console.WriteLine("The sum of {0:F3} and {1:F3} is {2:F3}", fltValue1, fltValue2, total);
-
     }
 }

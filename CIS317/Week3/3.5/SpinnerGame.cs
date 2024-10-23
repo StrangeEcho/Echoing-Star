@@ -1,6 +1,9 @@
-public class SpinnerGame : BoardGame {
+public class SpinnerGame : BoardGame
+{
     public SpinnerGame(string name, int numplayers, int maxmove) :
-        base (name, numplayers, maxmove) { }
+        base(name, numplayers, maxmove)
+    {
+    }
 
     public override string StartGame()
     {

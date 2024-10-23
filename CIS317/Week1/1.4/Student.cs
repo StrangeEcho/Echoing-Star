@@ -1,31 +1,38 @@
 using System.Security.Cryptography.X509Certificates;
 
-public class Student {
+public class Student
+{
     public string Name { get; set; }
     public string Major { get; set; }
     public double GPA { get; set; }
 
-    public Student(string name, string major, double gpa) {
+    public Student(string name, string major, double gpa)
+    {
         Name = name;
         Major = major;
-        GPA = gpa; 
+        GPA = gpa;
     }
 
-    public override string ToString() {
+    public override string ToString()
+    {
         return $"Student: {Name}\nMajor: {Major}\nGPA: {GPA}";
     }
 
-    public override bool Equals(object? obj) {
-        if ((obj == null) || !this.GetType().Equals(obj.GetType())) {
+    public override bool Equals(object? obj)
+    {
+        if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+        {
             return false;
         }
-        else {
+        else
+        {
             Student s = (Student)obj;
             return Name == s.Name;
         }
     }
-    
-    public override int GetHashCode() {
+
+    public override int GetHashCode()
+    {
         return Name.GetHashCode();
     }
 }

@@ -1,33 +1,42 @@
 using System.Runtime.CompilerServices;
 
-public class Student : Person {
+public class Student : Person
+{
     public int GradYear { get; private set; }
 
     public Student(string name, double age, string email, int gradYear) :
-        base(name, age, email) {
-            if (gradYear > 1900) {
-                GradYear = gradYear;
-            }
-            else {
-                gradYear = 1900;
-            }
+        base(name, age, email)
+    {
+        if (gradYear > 1900)
+        {
+            GradYear = gradYear;
         }
-    
-    public void UpdateGradYear(int gradYear) {
-        if (gradYear > 1900) {
+        else
+        {
+            gradYear = 1900;
+        }
+    }
+
+    public void UpdateGradYear(int gradYear)
+    {
+        if (gradYear > 1900)
+        {
             GradYear = gradYear;
         }
     }
 
-    public void UpdateName(string name) {
+    public void UpdateName(string name)
+    {
         Name = name;
     }
 
-    public void UpdateAge(double age) {
+    public void UpdateAge(double age)
+    {
         Age = age;
     }
 
-    public void UpdateEmail(string email) {
+    public void UpdateEmail(string email)
+    {
         Email = email;
     }
 

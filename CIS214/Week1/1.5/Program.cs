@@ -1,30 +1,38 @@
 ﻿/*****
-* name: Ruben Thomas
-* date: 5.15.2024
-* assignment: CIS214 Week 1 PA - Calculations & Unique Numbers
-*/ 
+ * name: Ruben Thomas
+ * date: 5.15.2024
+ * assignment: CIS214 Week 1 PA - Calculations & Unique Numbers
+ */
 
 using System;
 
-public class Account {
+public class Account
+{
     public string Name { get; set; }
     public double Balance { get; private set; }
 
-    public Account(string name, double balance) {
+    public Account(string name, double balance)
+    {
         Name = name;
-        if (balance > 0.0) {
+        if (balance > 0.0)
+        {
             Balance = balance;
         }
     }
-    
-    public void Deposit(double amount) {
-        if (amount > 0.0) {
+
+    public void Deposit(double amount)
+    {
+        if (amount > 0.0)
+        {
             Balance += amount;
         }
     }
 }
-public class AccountClass {
-    static void Main(string[] args) {
+
+public class AccountClass
+{
+    static void Main(string[] args)
+    {
         Console.WriteLine("\nRuben Thomas - Week 1 GP Account Class\n");
 
         Account acct1 = new Account("Jane Green", 50.00);
@@ -46,7 +54,6 @@ public class AccountClass {
         acct2.Deposit(deposit1);
 
         Console.WriteLine("{0} balance: ${1:F2}", acct1.Name, acct1.Balance);
-        Console.WriteLine("{0} balance: ${1:F2}", acct2.Name, acct2.Balance);        
-
+        Console.WriteLine("{0} balance: ${1:F2}", acct2.Name, acct2.Balance);
     }
 }

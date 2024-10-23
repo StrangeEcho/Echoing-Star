@@ -3,6 +3,9 @@
 *.sln
 *.exe
 
+# Rider
+.idea
+
 # Ignore build output and intermediate files
 bin/
 obj/

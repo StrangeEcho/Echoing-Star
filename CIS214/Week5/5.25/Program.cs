@@ -1,11 +1,13 @@
 ﻿// Thank you Davyan
 
 /*******************************************************************
-* Name: Ruben Thomas
-* Date: June 7, 2024
-* Assignment CIS214 Week 5 GP – First Inheritance BONUS
-*/
+ * Name: Ruben Thomas
+ * Date: June 7, 2024
+ * Assignment CIS214 Week 5 GP – First Inheritance BONUS
+ */
+
 using System;
+
 public class PersonClass
 {
     public string PName { get; set; }
@@ -16,7 +18,8 @@ public class PersonClass
 
     public PersonClass(string dt, long num)
     {
-        DOB = dt; SSN = num;
+        DOB = dt;
+        SSN = num;
     }
 
     public uint get_age()
@@ -25,9 +28,8 @@ public class PersonClass
         DateTime birthDate = Convert.ToDateTime(DOB);
 
         TimeSpan diff = (curDate - birthDate);
-        return Convert.ToUInt32(diff.TotalDays/365);
+        return Convert.ToUInt32(diff.TotalDays / 365);
     }
-
 }
 
 public class StudentClass : PersonClass
@@ -46,8 +48,8 @@ public class StudentClass : PersonClass
     {
         Console.WriteLine("\n Name: {0}\n Major {1}\n GPA: {2}\n", PName, umajor, GPA);
     }
-
 }
+
 public class PersonDemo
 {
     static void Main(string[] args)

@@ -1,23 +1,28 @@
 ﻿/*****
-* name: Ruben Thomas
-* date: 5.29.2024
-* assignment: CIS214 Week 4 GP - System Generated Exceptions
-*/
+ * name: Ruben Thomas
+ * date: 5.29.2024
+ * assignment: CIS214 Week 4 GP - System Generated Exceptions
+ */
 
 using System;
 
-public class SystemExceptionDemo {
-
-    public static int Quotient(int numerator, int denominator) {
+public class SystemExceptionDemo
+{
+    public static int Quotient(int numerator, int denominator)
+    {
         return numerator / denominator;
     }
-    static void Main(string[] args) {
+
+    static void Main(string[] args)
+    {
         Console.WriteLine("Ruben Thomas - Week 4 GP - System Generated Exceptions");
 
         bool cont = true;
 
-        do {
-            try {
+        do
+        {
+            try
+            {
                 Console.Write("Please enter an integer numerator: ");
                 string? val = Console.ReadLine();
                 int numerator = Convert.ToInt32(val);
@@ -29,11 +34,13 @@ public class SystemExceptionDemo {
                 Console.WriteLine("\nResult: {0} / {1} = {2}", numerator, denominator, res);
                 cont = false;
             }
-            catch (FormatException e) {
+            catch (FormatException e)
+            {
                 Console.WriteLine("\nException: {0}", e);
                 Console.WriteLine("You must enter integers. Please try again...");
             }
-            catch (DivideByZeroException e) {
+            catch (DivideByZeroException e)
+            {
                 Console.WriteLine("\n {0}", e);
                 Console.WriteLine("Zero is an invalid denominator. Please try again...");
             }
@@ -49,5 +56,5 @@ public class SystemExceptionDemo {
         int res2 = Quotient(numerator2, denominator2);
 
         Console.WriteLine("\nResult: {0} / {1} = {2}", numerator2, denominator2, res2);
-    }    
+    }
 }

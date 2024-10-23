@@ -1,10 +1,12 @@
-public class CardGame : Game {
+public class CardGame : Game
+{
     public int NumCards { get; set; }
 
     public CardGame(string name, int numplayers, int numcards) :
-        base(name, numplayers) {
-            NumCards = numcards;
-        }
+        base(name, numplayers)
+    {
+        NumCards = numcards;
+    }
 
     public override string StartGame()
     {
@@ -25,5 +27,4 @@ public class CardGame : Game {
     {
         return base.ToString();
     }
-
 }

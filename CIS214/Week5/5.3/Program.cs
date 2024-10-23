@@ -1,12 +1,14 @@
 ﻿/*****
-* name: Ruben Thomas
-* date: 6.7.2024
-* assignment: CIS214 Week 5 GP - Inheritance & Overriding
-*
-*/
+ * name: Ruben Thomas
+ * date: 6.7.2024
+ * assignment: CIS214 Week 5 GP - Inheritance & Overriding
+ *
+ */
 
-public class App {
-    static void Main(string[] args) {
+public class App
+{
+    static void Main(string[] args)
+    {
         Console.WriteLine("\nRuben Thomas - Week 5 GP - Inheritance & Overriding");
 
         Shape s = new Shape("Blue");

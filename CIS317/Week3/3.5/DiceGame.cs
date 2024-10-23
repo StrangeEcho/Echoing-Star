@@ -1,6 +1,9 @@
-public class DiceGame : BoardGame {
+public class DiceGame : BoardGame
+{
     public DiceGame(string name, int numplayers, int maxmove) :
-        base(name, numplayers, maxmove) { }
+        base(name, numplayers, maxmove)
+    {
+    }
 
     public override string StartGame()
     {

@@ -1,5 +1,7 @@
-﻿public class MainProgram {
-    static void Main(string[] args) {
+﻿public class MainProgram
+{
+    static void Main(string[] args)
+    {
         Console.WriteLine("Ruben Thomas - Week 3 Abstraction Performance Assessment\n\n");
 
         Console.WriteLine("Card Game Information");
@@ -14,5 +16,4 @@
         SpinnerGame spinnerGame = new SpinnerGame("Life", 4, 10);
         Console.WriteLine(spinnerGame.ToString());
     }
-
 }

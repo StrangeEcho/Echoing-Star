@@ -1,12 +1,15 @@
 ﻿/*****
-* name: Ruben Thomas
-* date: 5.15.2024
-* assignment: CIS214 Week 2 GP - Decisions & Logical Operators
-*/ 
+ * name: Ruben Thomas
+ * date: 5.15.2024
+ * assignment: CIS214 Week 2 GP - Decisions & Logical Operators
+ */
+
 using System;
 
-public class App {
-    static void Main(string[] args) {
+public class App
+{
+    static void Main(string[] args)
+    {
         Console.WriteLine("\nRuben Thomas - Week 2 GP Decisions & Logical Operators\n");
 
         Console.WriteLine(
@@ -48,7 +51,7 @@ public class App {
             "true ^ false", true ^ false,
             "true ^ true", true ^ true
         );
-    
+
         Console.WriteLine(
             "Logical negation (!):\n{0}: {1}\n{2}: {3}",
             "!false", !false,
@@ -60,25 +63,31 @@ public class App {
         int grade = Convert.ToInt32(val);
 
         Console.WriteLine("Determining grade using if-else");
-        if (grade >= 90) {
+        if (grade >= 90)
+        {
             Console.WriteLine("The grade entered is an A");
         }
-        else if (grade >= 80) {
+        else if (grade >= 80)
+        {
             Console.WriteLine("The grade entered is a B");
         }
-        else if (grade >= 70) {
+        else if (grade >= 70)
+        {
             Console.WriteLine("The grade entered is a C");
         }
-        else if (grade >= 60) {
+        else if (grade >= 60)
+        {
             Console.WriteLine("The grade entered is a D");
         }
-        else {
+        else
+        {
             Console.WriteLine("The grade entered is an F");
         }
 
         Console.WriteLine("Determining grade using switch");
 
-        switch (grade / 10) {
+        switch (grade / 10)
+        {
             case 9:
             case 10:
                 Console.WriteLine("The grade entered is an A");

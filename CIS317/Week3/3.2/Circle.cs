@@ -1,7 +1,9 @@
-public class Circle : Shape {
+public class Circle : Shape
+{
     public double Radius { get; set; }
 
-    public Circle(string fillColor, string lineColor, double radius) : base(fillColor, lineColor) {
+    public Circle(string fillColor, string lineColor, double radius) : base(fillColor, lineColor)
+    {
         Radius = radius;
     }
 

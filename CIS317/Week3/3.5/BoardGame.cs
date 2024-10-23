@@ -1,10 +1,12 @@
-public abstract class BoardGame : Game {
+public abstract class BoardGame : Game
+{
     public int MaxMove { get; set; }
 
     public BoardGame(string name, int numplayers, int maxmove) :
-        base(name, numplayers) {
-            MaxMove = maxmove;
-        }
+        base(name, numplayers)
+    {
+        MaxMove = maxmove;
+    }
 
     public abstract override string StartGame();
     public abstract override string StartTurn();

@@ -1,3 +1,6 @@
-public class ElectricCar : Car {
-    public ElectricCar() : base("Electricity", "Electric Motor") { }
+public class ElectricCar : Car
+{
+    public ElectricCar() : base("Electricity", "Electric Motor")
+    {
+    }
 }
