@@ -17,7 +17,7 @@ public class PersonDB
     public static void AddPerson(SQLiteConnection conn, Person p)
     {
         string sql = "INSERT INTO People (FirstName, LastName, Age) "
-                     + $"VALUES ({p.FirstName}, {p.LastName}, {p.Age})";
+                     + $"VALUES ('{p.FirstName}', '{p.LastName}', {p.Age})";
         SQLiteCommand cmd = new SQLiteCommand(sql, conn);
         cmd.ExecuteNonQuery();
     }
@@ -47,7 +47,37 @@ public class PersonDB
         SQLiteDataReader reader = cmd.ExecuteReader();
         while (reader.Read())
         {
-            //
+            people.Add(
+                new Person(
+                    reader.GetInt32(0),
+                    reader.GetString(1),
+                    reader.GetString(2),
+                    reader.GetInt32(3)
+                )
+            );
         }
+        return people;
     }
+
+    public static Person GetPerson(SQLiteConnection conn, int id) 
+    {
+        string sql = $"SELECT * FROM People WHERE ID = {id}";
+
+        SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+        SQLiteDataReader reader = cmd.ExecuteReader();
+
+        if (reader.Read())
+        {
+            return new Person(
+                reader.GetInt32(0),
+                reader.GetString(1),
+                reader.GetString(2),
+                reader.GetInt32(3)
+            );
+        }
+        else
+        {
+            return new Person(-1, "", "", -1);
+        }
+    } 
 }
