@@ -1,0 +1,9 @@
+﻿CREATE TABLE IF NOT EXISTS Addresses 
+(
+    AddressID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Address1 VARCHAR(50),
+    Address2 VARCHAR(50),
+    City VARCHAR(50),
+    State VARCHAR(50),
+    ZipCode INT
+);
