@@ -14,6 +14,7 @@ public class RecursionIterationDemo
         Console.WriteLine("\nRecursive Name Reverse:");
         Console.WriteLine(RecursiveNameReverse("Ruben Thomas"));
     }
+    
     private static void IterativeCountdown(int startNum)
     {
         for (int i = startNum; i > 0; i--)
@@ -22,6 +23,7 @@ public class RecursionIterationDemo
         }
         Console.Write("Blastoff!");
     }
+    
     private static void RecursiveCountdown(int startNum)
     {
         if (startNum == 0)
@@ -45,6 +47,7 @@ public class RecursionIterationDemo
         }
         return reverseName.ToString();
     }
+    
     private static string RecursiveNameReverse(string name)
     {
         if (name.Length == 0)
