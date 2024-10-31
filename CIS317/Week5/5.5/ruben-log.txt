@@ -1,0 +1,6 @@
+Starting application at 10/31/2024 2:42:13 PM.
+Creating list of buildings at 10/31/2024 2:42:13 PM.
+Finished appending 5 House objects to the list at 10/31/2024 2:42:13 PM
+Printed buildings iteratively at 10/31/2024 2:42:13 PM.
+Printed buildings recursively at 10/31/2024 2:42:13 PM
+Application completed successfully at 10/31/2024 2:42:13 PM.
